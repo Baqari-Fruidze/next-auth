@@ -1,6 +1,7 @@
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
+import { pages } from "next/dist/build/templates/app-page";
 
 export const options: NextAuthOptions = {
   providers: [
@@ -36,4 +37,7 @@ export const options: NextAuthOptions = {
       },
     }),
   ],
+  pages: {
+    signIn: "/sign-In",
+  },
 };
